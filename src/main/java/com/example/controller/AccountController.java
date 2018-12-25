@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping(value = "/user")
 public class AccountController {
@@ -26,4 +28,5 @@ public class AccountController {
     public Object findAllUser(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize){
         return accountService.findAllAccount(pageNum,pageSize);
     }
+
 }
