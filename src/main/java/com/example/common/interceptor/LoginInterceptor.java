@@ -31,7 +31,9 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
         log.info("--------------处理请求完成后视图渲染之前的处理操作---------------");
-        modelAndView.setViewName("test");
+        log.info(httpServletRequest.getRequestURI());
+        log.info(httpServletRequest.getRequestURL().toString());
+//        modelAndView.setViewName("test");
     }
 
     @Override
