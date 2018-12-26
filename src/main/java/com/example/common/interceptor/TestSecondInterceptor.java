@@ -8,9 +8,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LoginInterceptor implements HandlerInterceptor {
+public class TestSecondInterceptor implements HandlerInterceptor {
 
-    private static final Logger log = LoggerFactory.getLogger(LoginInterceptor.class);
+    private static final Logger log = LoggerFactory.getLogger(TestSecondInterceptor.class);
 
     /**
      * 进入controller层之前拦截请求
@@ -23,22 +23,22 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
 
-        log.info("---------------------开始进入请求地址拦截----------------------------");
+        log.info("---------------------Second开始进入请求地址拦截----------------------------");
         return true;
 
     }
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-        log.info("--------------处理请求完成后视图渲染之前的处理操作---------------");
-        log.info(httpServletRequest.getRequestURI());
-        log.info(httpServletRequest.getRequestURL().toString());
+        log.info("--------------Second处理请求完成后视图渲染之前的处理操作---------------");
+//        log.info(httpServletRequest.getRequestURI());
+//        log.info(httpServletRequest.getRequestURL().toString());
 //        modelAndView.setViewName("test");
     }
 
     @Override
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
-        log.info("---------------视图渲染之后的操作-------------------------0");
+        log.info("---------------Second视图渲染之后的操作-------------------------0");
     }
 
 }
