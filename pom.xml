@@ -86,7 +86,23 @@
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<!--<scope>provided</scope>-->
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/cn.hutool/hutool-http -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-http</artifactId>
+			<version>4.3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>com.fasterxml.jackson.jaxrs</groupId>-->
+			<!--<artifactId>jackson-jaxrs-xml-provider</artifactId>-->
+		<!--</dependency>-->
 	</dependencies>
 
 	<build>
